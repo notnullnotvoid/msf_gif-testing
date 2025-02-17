@@ -83,9 +83,7 @@ void print_profiling_trace() {
 	uint64_t tsc = __rdtsc();
     uint64_t diffTsc = tsc - tscStart;
     double tscPerSecond = diffTsc / elapsedSeconds;
-    //NOTE: we repord nanoseconds instead of microseconds because of a bug in chrome://tracing
-    //		that causes function timings to stack incorrectly if they are too short
-    double tscPerMicrosecond = tscPerSecond / 1'000'000'000;
+    double tscPerMicrosecond = tscPerSecond / 1'000'000;
 
 	FILE * out = fopen("trace.json", "wb");
 	fprintf(out, "[\n");

@@ -1,18 +1,12 @@
 
-v2.3 TODOs:
-- split repository
-- readme for the test repo
-- update readme and mention the test repo
-- rename `maxBitDepth` to `quality` and update documentation in header and readme
-- fix excessive stack usage
-
 future TODOs:
 - fix usage of `_mm_srli_epi32()`
-- add gifski comparison test code
+- make `msf_gif_alpha_threshold` and `msf_gif_bgra_flag` members of the MsfGifState or something instead of global variables?
 - experiment with pseudo-random dither kernel
 - dither kernel option? (flat / regular / pseudo-random)
+? add gifski comparison test code
 
-- more efficient/less hacky to-file API
+- more efficient/less hacky to-file API imlementation
 - more aggressive checking of invalid API arguments
 - NEON SIMD
 - API for writing pre-palettized data?
